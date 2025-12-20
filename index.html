@@ -38,7 +38,7 @@
         /* --- HEADER --- */
         header {
             position: absolute;
-            top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;
+            top: 0; width: 100%; display: flex; align-items: center; gap: 20px;
             padding: 20px 5%; z-index: 1000;
             background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
         }
@@ -48,8 +48,16 @@
             letter-spacing: 1px;
         }
 
+        .nav-logo-right {
+            width: 150px;
+            height: 55px;
+            object-fit: contain;
+            margin-left: auto;
+        }
+
+        nav { flex: 1; }
         /* Desktop Nav */
-        .nav-links { display: flex; gap: 30px; }
+        .nav-links { display: flex; gap: 30px; justify-content: center; }
         .nav-links a {
             font-family: var(--font-heading); font-weight: 600; text-transform: uppercase;
             font-size: 0.9rem; letter-spacing: 1px; cursor: pointer;
@@ -213,7 +221,6 @@
         /* --- MOBILE MEDIA QUERIES --- */
         @media (max-width: 900px) {
             .nav-links { display: none; }
-            .btn-nav { opacity: 1 !important; display: none; } /* Hide Register button in header, move to mobile menu if needed */
             .hamburger { display: block; }
             
             .hero h1 { font-size: 1.8rem; }
@@ -246,7 +253,9 @@
                 <li><a href="#" class="nav-trigger" data-target="venueModal">Venue</a></li>
             </ul>
         </nav>
-        
+
+        <img src="assets/Offenso.webp" alt="Offenso Hackers Academy logo" class="nav-logo-right">
+
         <div class="hamburger" id="hamburgerBtn">
             <i class="fas fa-bars"></i>
         </div>
@@ -259,7 +268,6 @@
             <a href="#" class="mobile-link" data-target="matchModal" style="color:var(--accent-gold)">Live Score</a>
         </div>
 
-        <a href="#" class="btn-nav" style="opacity: 0;">Register</a> 
     </header>
 
     <section class="hero">
